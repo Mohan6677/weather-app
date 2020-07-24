@@ -13,7 +13,7 @@ const forecast = (latitude,longitude,callback)=>{
         }
         else
         {
-            callback(undefined,body.daily[0])
+            callback(undefined,body.current.weather[0].description.toString()+". It is "+body.current.temp.toString()+" degrees out."+"humidity is "+body.current.humidity.toString())
         }
     })
 }
